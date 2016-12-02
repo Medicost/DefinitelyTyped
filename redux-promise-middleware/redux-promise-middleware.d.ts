@@ -3,10 +3,9 @@
 // Definitions by: ianks <https://github.com/ianks>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-/// <reference path='../redux/redux.d.ts' />
-
+/// <reference types='redux' />
 declare module "redux-promise-middleware" {
-    function promiseMiddleware(config?: { promiseTypeSuffixes: string[] }): Redux.Middleware;
-
+    import { Middleware } from 'redux';
+    function promiseMiddleware(config?: { promiseTypeSuffixes: string[] }): Middleware;
     export default promiseMiddleware;
 }
